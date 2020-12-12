@@ -22,3 +22,23 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
+  - name: pull-test-dev-push
+    decorate: true
+    run_if_changed: 'push.sh'
+    branches:
+      - ^master$
+    spec:
+      containers:
+        - image: alpine/git:v2.26.2
+          command:
+            - /push.sh
+          args:
+            - --token=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
