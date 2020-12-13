@@ -35,7 +35,6 @@ presubmits:
           args:
             - --github-token-path=/etc/github/token
             - --dry-run=false
-            - --github-endpoint=http://ghproxy
             - --github-endpoint=https://api.github.com
             - --contexts=hello
           volumeMounts:
