@@ -16,6 +16,7 @@ presubmits:
             - --token=/etc/github/token
             - --git-user=rustin-bot
             - --git-email=liudongpo@pingcap.com
+            - --git-user-from-github=false
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
