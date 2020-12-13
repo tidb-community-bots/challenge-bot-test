@@ -24,6 +24,7 @@ presubmits:
             secretName: github-token
   - name: pull-test-dev-push
     decorate: true
+    always_run: true
     branches:
       - ^master$
     spec:
