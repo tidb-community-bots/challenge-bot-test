@@ -37,6 +37,7 @@ presubmits:
             - --dry-run=false
             - --github-endpoint=http://ghproxy
             - --github-endpoint=https://api.github.com
+            - --contexts=hello
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
