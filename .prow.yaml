@@ -38,6 +38,7 @@ presubmits:
             - --github-endpoint=https://api.github.com
             - --contexts=hello
             - --labels=status/can-merge
+            - --retesting-branch=try
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
