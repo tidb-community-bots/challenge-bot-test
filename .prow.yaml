@@ -39,8 +39,6 @@ presubmits:
             - --contexts=hello
             - --labels=status/can-merge
             - --retesting-branch=try
-            - --git_user_name=rustin-bot
-            - --git_user_email=liudongpo@pingcap.com
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
