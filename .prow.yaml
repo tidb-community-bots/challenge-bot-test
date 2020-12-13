@@ -24,16 +24,18 @@ presubmits:
             secretName: github-token
   - name: pull-test-dev-push
     decorate: true
-    run_if_changed: 'push.sh'
     branches:
       - ^master$
     spec:
       containers:
-        - image: alpine/git:v2.26.2
+        - image: rustinliu/rerere-test:latest
           command:
-            - ./push.sh
+            - rerere
           args:
-            - --token=/etc/github/token
+            - --github-token-path=/etc/github/token
+            - --dry-run=false
+            - --github-endpoint=http://ghproxy
+            - --github-endpoint=https://api.github.com
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
