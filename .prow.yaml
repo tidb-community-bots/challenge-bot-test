@@ -36,7 +36,7 @@ presubmits:
             - --github-token-path=/etc/github/token
             - --dry-run=false
             - --github-endpoint=https://api.github.com
-            - --contexts=hello
+            - --requireContexts=hello
             - --labels=status/can-merge
             - --retesting-branch=try
             - --git-user=rustin-bot
