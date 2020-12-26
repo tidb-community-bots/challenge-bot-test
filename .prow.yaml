@@ -29,19 +29,16 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: rustinliu/rerere-component:latest
+        - image: rustinliu/rerere-test:latest
           command:
             - rerere
           args:
             - --github-token-path=/etc/github/token
             - --dry-run=false
             - --github-endpoint=https://api.github.com
-            - --requireContexts=hello
+            - --require-contexts=hello
             - --labels=status/can-merge
             - --retesting-branch=try
-            - --git-user=rustin-bot
-            - --git-email=liudongpo@pingcap.com
-            - --git-user-from-github=false
             - --git-token-path=/etc/github/token
           volumeMounts:
             - name: github-token
