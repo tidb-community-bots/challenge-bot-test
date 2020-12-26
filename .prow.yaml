@@ -24,7 +24,9 @@ presubmits:
             secretName: github-token
   - name: pull-test-dev-push
     decorate: true
-    always_run: true
+    trigger: "(?mi)^/merge\\s*$"
+    rerun_command: "/merge"
+    max_concurrency: 1
     branches:
       - ^master$
     spec:
