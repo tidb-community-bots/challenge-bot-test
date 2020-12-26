@@ -41,7 +41,6 @@ presubmits:
             - --require-contexts=hello
             - --labels=status/can-merge
             - --retesting-branch=try
-            - --git-token-path=/etc/github/token
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
