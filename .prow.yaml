@@ -30,6 +30,7 @@ presubmits:
     branches:
       - ^master$
     spec:
+      terminationGracePeriodSeconds: 3m
       containers:
         - image: rustinliu/rerere-test:latest
           command:
