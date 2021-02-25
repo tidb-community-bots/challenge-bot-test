@@ -19,11 +19,12 @@
       "githubName": "Rustin-Liu6"
     }
   ],
-  "reviewers": [],
-  "activeContributors": [
+  "reviewers": [
     {
       "githubName": "Rustin-Liu4"
-    },
+    }
+  ],
+  "activeContributors": [
     {
       "githubName": "Rustin-Liu5"
     },
