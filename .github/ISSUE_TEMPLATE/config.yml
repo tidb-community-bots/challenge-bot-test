@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: Create new issue
-    url: http://localhost:3000
-    about: The issue which is not created via http://localhost:3000 will be closed immediately.
+    url: http://47.100.245.243:5000/
+    about: Please use the following link to create a new issue.
