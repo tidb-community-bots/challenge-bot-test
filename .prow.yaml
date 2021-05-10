@@ -30,7 +30,7 @@ presubmits:
 #    max_concurrency: 1
 #    branches:
 #      - ^master$
-#    spec:
+#    spaec:
 #      containers:
 #        - image: rustinliu/rerere-test:latest
 #          command:
