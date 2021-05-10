@@ -28,7 +28,7 @@ presubmits:
 #    trigger: "(?mi)^/(merge|rerere)\\s*$"
 #    rerun_command: "/rerere"
 #    max_concurrency: 1
-#    branches:
+#    branches1:
 #      - ^master$
 #    spaec:
 #      containers:
